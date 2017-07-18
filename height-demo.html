@@ -3,6 +3,7 @@
     <head>
         <script type="text/javascript" src="flexible.js"></script>
         <link type="text/css" rel="stylesheet" href="iconfont.css">
+        <link rel="stylesheet" href="./swiper/swiper.min.css">
         <style>
             * {
                 box-sizing: border-box;
@@ -10,12 +11,26 @@
                 padding: 0;
             }
 
+            body {
+                /* Base64 encoded transparent gif */
+                /*background: url(data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7);*/
+                background-color: #eee;
+                color: #666;
+            }
 
             ol, ul{
                 list-style: none;
             }
 
+            .place-holder {
+                display: block;
+                width: 100%;
+                height: 1rem;
+                background-color: lightblue;
+            }
+
             nav {
+                position: relative;
                 background-color: #039959;;
                 height: 1.066rem;
                 line-height: 1.066rem;
@@ -64,13 +79,155 @@
                 margin: 0 1.2rem;
             }
 
-        </style>
-        
+            .row {
+                margin-bottom: .2rem;
+            }
+
+            .swiper-container {
+                width: 100%;
+                height: 3rem;
+            }
+
+            .orange-slide{
+                background-color: #FF8604;
+            }
+
+            .red-slide{
+                background-color: #CA4040;
+            }
+
+            .blue-slide{
+                background-color: #4390EE;
+            }
+
+            .swiper-pagination-bullet{
+                width: 0.2rem;
+                height: 0.2rem;
+            }
+
+            .lazy-img {
+                width: 100%;
+                height: 100%;
+                overflow: hidden;
+                background-position: center 0;
+                background-repeat: no-repeat;
+                background-size: contain;
+            }
+
+            .index-menu {
+                width: 100%;
+                padding: .2rem;
+                background-color: #fff;
+            }
+
+            ul.ul-horizontal {
+                width: 100%;
+                text-align: center;
+            }
+            
+            .ul-horizontal li {
+                width: 25%;
+                display: block;
+            }
+
+            ul li img {
+                margin: 0 auto .2rem auto;
+                display: block;
+                border: 0;
+                width: 1.406rem;
+                height: 1.406rem;
+            }
+
+            .ul-horizontal{
+                list-style: none;
+                padding: 0;
+                margin: 0;
+            }
+
+            .ul-horizontal li {
+                float: left;
+            }
+
+            .clearfix:before, .clearfix:after {
+                content: "";
+                display: table;
+            }
+
+            .clearfix:after{
+                clear:both;
+            }
+
+            .clearfix{
+                zoom:1;
+            }
+
+            .floors-container {
+                margin: 0 .2rem 0 .2rem;
+            }
+
+            .index-floor{
+                width: 100%;
+                padding: .2rem;
+                position: relative;
+                background-color: #fff;
+            }
+
+            .index-floor .floor-header{
+                
+                height: 0.6rem;
+                line-height: 0.6rem;
+                margin-bottom: 0.2rem;
+            }
+
+            .icon-miaosha{
+                background-image: url(./images/app_z.png?__sprite);
+                display: inline-block;
+                vertical-align: middle;
+                width: .4rem;
+                height: .4rem;
+                background-repeat: no-repeat;
+                background-position: -4px -294px;
+            }
+
+            .floor-header-text{
+                display: inline-block;
+                vertical-align: middle;
+            }
+
+            .floor-content .product-left{
+                width: 50%;
+                float: left;
+                margin-bottom: .2rem;
+                background-color: white;
+            }
+
+            .floor-content .product-right{
+                width:50%;
+                float: right;
+                margin-bottom: .2rem;
+                background-color: white;
+            }
+
+            .floor-content .product-left .product-placeholder{
+                padding-right: .1rem;
+                border-right: 1px solid gray;
+            }
+
+            .floor-content .product-placeholder{
+                width: 4.5rem;
+                height: 4.5rem;
+            }
+
+            
+
+        </style>  
+
     </head>
+
     <body>
-        <nav class="header">
+        <nav>
             <ul>
-                <li class="header-back">
+                <li>
                     <span class="iconfont icon-back"></span>
                 </li>
                 <li>
@@ -82,5 +239,96 @@
             </ul>
         </nav>
 
+        <section>
+            <div class="swiper-container row">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide orange-slide">
+                        <div class="">
+                            <img class="lazy-img" src="http://img2.ph.126.net/s3pbmZYJ2eGVx0YOWs5w2w==/1972295161912131980.jpg">
+                        </div>
+                    </div>
+                    <div class="swiper-slide red-slide">
+                        <div class="">
+                            <img class="lazy-img" src="http://img.ph.126.net/PoSwArqLYB9resnNz8ERiw==/1573163644852738602.jpg">
+                        </div>
+                    </div>
+                    <div class="swiper-slide blue-slide">
+                        <div>
+                            <img class="lazy-img" src="http://img0.ph.126.net/sbv_vWzKzxUD9_FxtUbt9Q==/6608902710794597820.jpg">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-pagination"></div>
+            </div>
+        </section>
+
+        <section class="index-menu row">
+            <ul class="ul-horizontal clearfix">
+                <li>
+                    <a >
+                        <img src="./images/nav_category.png"/>
+                        <span>分类查询<span>
+                    </a>
+                </li>
+                <li>
+                    <a >
+                        <img src="./images/nav_time.png"/>
+                        <span>我的订单<span>
+                    </a>
+                </li>
+                <li>
+                    <a >
+                        <img src="./images/nav_cart.png"/>
+                        <span>我的购物车<span>
+                    </a>
+                </li>
+                <li>
+                    <a >
+                        <img src="./images/nav_mine.png"/>
+                        <span>个人中心<span>
+                    </a>
+                </li>
+                
+            </ul>
+        </section>
+
+        <section class="floors-container">
+            <div class="row">
+                <div class="index-floor">
+                    <div class="floor-header">
+                        <span class="icon-miaosha"></span>
+                        <span class="floor-header-text">秒杀抢购</span>
+                    </div>
+                    <div class="floor-content">
+                        <div class="row">
+                            <a class="product-left">
+                                <div class="product-placeholder">
+                                    <div class="lazy-img lazy" data-original="./images/product1.jpg"></div>
+                                </div>
+                                <div class="product-price">
+                                    <span class="price-now">$68.00</span>
+                                    <span class="price-origin">$108</span>
+                                </div>
+                            </a>
+                            <a class="product-right">
+                                <div class="product-placeholder">
+                                    <div class="lazy-img lazy" data-original="./images/product2.jpg"></div>
+                                </div>
+                                <div class="product-price">
+                                    <span class="price-now">$68.00</span>
+                                    <span class="price-origin">$108</span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <script src="./jquery/jquery-2.1.4.min.js"></script>
+        <script src="./swiper/swiper.min.js"></script>
+        <script src="./jquery.plugins/jquery.lazyload.js"></script>
+        <script src="./hd.js"></script>
     </body>
 </html>
