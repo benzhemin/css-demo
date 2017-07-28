@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body {
+            padding: 0px;
+            margin: 0px;
+        }
+        h1 {
+            padding: 10px;
+            margin: 0px;
+        }
+        p {
+            padding: 10px;
+            margin: 0px;
+        }
+
+        .wrapper{
+            width: 50%;
+            padding: 1em;
+            background-color: lightgray;
+            border-radius: 3px;
+        }
+
+        .container-layout{
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .bg {
+            height: 400px;
+            padding: 1em;
+            background-color: hsla(31, 15%, 50%, 0.1);
+            border-radius: 3px;
+        }
+
+        .align-layout {
+            display: flex;
+            flex-flow: row nowrap;
+
+            align-items: center;
+
+            height: 300px;
+        }
+
+        .item{
+            flex: 1 0 auto;
+            background-color: #007aff;
+            padding: 5px;
+            text-align: center;
+        }
+
+        .item-1{
+            align-self: flex-start;
+        }
+        .item-3{
+            align-self: flex-end;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container-layout bg">
+        <div class="wrapper">
+            <h1>I'm Centered!</h1>
+            <p>This box is both vertically and horizontally centered. Even if the text in this box changes to make it wider or taller, the box will still be centered. Go ahead, give it a try. Just click to edit the text.</p>
+        </div>
+    </div>
+
+    <div class="container-layout bg">
+        <div class="wrapper">
+            <div class="align-layout">
+                <div class="item item-1"><strong>Top</strong></div>
+                <div class="item item-2"><strong>Center</strong></div>
+                <div class="item item-3"><strong>Bottom</strong></div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
