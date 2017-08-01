@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial;
+        }
+
+        .elem {
+            position: relative;
+            border: 3px solid #6AC5AC;
+
+            margin-bottom: 10px;
+        }
+
+        .label-start {
+            position: absolute;
+            top: 0;
+            left: 0;
+            padding: 0 3px;
+            line-height: 1em;
+            color: white;
+        }
+
+        .label-end {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            padding: 0 3px;
+            line-height: 1em;
+            color: white;
+        }
+
+        p {
+            padding: 0 1em;
+            margin: 1em 0;
+        }
+
+        .container {
+            margin-top: 10px;
+            margin-bottom: 10px;
+            position: relative;
+        }
+
+        nav {
+            position: absolute;
+            left: 0;
+            width: 200px;
+            border: 2px solid #D64078;
+        }
+
+        .green {
+            background-color: #6AC5AC;
+        }
+
+        .red {
+            background-color: #D64078;
+        }
+
+        .yellow {
+            background-color: #FDC72F;
+            color: black;
+        }
+
+        .yellow-border {
+            border-color: #FDC72F;
+        }
+
+        .lightgray {
+            background-color: lightgray;
+        }
+
+        ul {
+            list-style-type: disc;
+            line-height: 1.5em;
+        }
+
+        ul a:link {
+            color: #D64078;
+            text-decoration: none;
+        }
+
+        .content {
+            position: relative;
+            margin-left: 200px;
+            padding: 0.5em;
+            border: 2px solid #FDC72F;
+        }
+
+        .lightgray img {
+            float: right;
+            max-width: 150px;
+        }
+
+        .box {
+            margin: 10px 10px 10px 10px;
+            float: left;
+            width: 200px;
+        }
+
+        .box p {
+            margin-bottom: 50px;
+        }
+
+        .after-box {
+            clear: both;
+        }
+
+        .box2 {
+            display: inline-block;
+            width: 200px;
+        }
+
+        .box2 p {
+            margin-bottom: 50px;
+        }
+
+        .nav-inline {
+            position: relative;
+            display: inline-block;
+            vertical-align: top;
+            width: 25%;
+            border: 2px solid #D64078;
+        }
+
+        .section-inline {
+            position: relative;
+            display: inline-block;
+            vertical-align: top;
+            width: 75%;
+            padding: 0.5em;
+            border: 2px solid #FDC72F;
+        }
+
+        .content-inline{
+            margin-left: 0;
+        }
+
+        .container-flex{
+            display: flex;
+            flex-flow: row nowrap;
+            align-items: flex-start;
+        }
+
+        .nav-flex{
+            flex: 0 0 25%;
+            position: relative;
+
+            border: 2px solid #D64078;
+        }
+
+        .section-flex{
+            flex: 1 1 auto;
+            position: relative;
+            padding: 0.5em;
+            border: 2px solid #FDC72F;
+        }
+    </style>
+</head>
+<body>
+<div class="elem">
+    <span class="label-start green">&lt;div&gt;</span>
+    <p>
+        div 是一个标准的块级元素。一个块级元素会新开始一行并且尽可能撑满容器。其他常用的块级元素包括 p 、 form 和HTML5中的新元素： header 、 footer 、 section 等等。
+    </p>
+    <span class="label-end green">&lt;div&gt;</span>
+</div>
+
+<div class="container elem">
+    <span class="label-start green">&lt;class="container"&gt;</span>
+    <nav class="nav">
+        <span class="label-start red">&lt;nav&gt;</span>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Taco Menu</a></li>
+            <li><a href="#">Draft List</a></li>
+            <li><a href="#">Hours</a></li>
+            <li><a href="#">Directions</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+        <span class="label-end red">&lt;nav&gt;</span>
+    </nav>
+    <section class="content">
+        <span class="label-start yellow">&lt;section&gt;</span>
+        <p class="lightgray">
+            The margin-left style for sections makes sure there is room for the nav. Otherwise the absolute and static
+            elements would overlap
+        </p>
+        <span class="label-end yellow">&lt;section&gt;</span>
+    </section>
+    <section class="content lightgray">
+        <span class="label-start yellow">&lt;section&gt;</span>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi
+            lorem egestas odio, vitae scelerisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue
+            eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Mauris ante ligula, facilisis sed ornare
+            eu, lobortis in odio. Praesent convallis urna a lacus interdum ut hendrerit risus congue. Nunc sagittis
+            dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare
+            turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed
+            dapibus pulvinar nibh tempor porta. Cras ac leo purus. Mauris quis diam velit.
+        </p>
+        <span class="label-end yellow">&lt;section&gt;</span>
+    </section>
+    <section class="content">
+        <span class="label-start yellow">&lt;section&gt;</span>
+        <p>
+            Notice what happens when you resize your browser. It works nicely!
+        </p>
+        <span class="label-end yellow">&lt;section&gt;</span>
+    </section>
+</div>
+<div class="lightgray elem">
+    <span class="label-start green">float</span>
+    <img src="http://learnlayout.com/images/ilta.png">
+    <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi
+        lorem egestas odio, vitae scelerisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget,
+        auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Mauris ante ligula, facilisis sed ornare eu,
+        lobortis in odio. Praesent convallis urna a lacus interdum ut hendrerit risus congue. Nunc sagittis dictum nisi,
+        sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui
+        eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor
+        porta. Cras ac leo purus. Mauris quis diam velit.
+    </p>
+</div>
+
+<div class="elem ">
+    <span class="label-start green">section</span>
+    <div class="elem box">
+        <span class="label-start green">div class=box</span>
+        <p>I feel like I'm floating!</p>
+        <span class="label-end green">div class=box</span>
+    </div>
+    <p>
+        In this case, the section element is actually after the div. However, since the div is floated to the left, this
+        is what happens: the text in the section is floated around the div and the section surrounds the whole thing.
+        What if we wanted the section to actually appear after the floated element?
+    </p>
+</div>
+
+<div>
+    <div class="elem box">
+        <span class="label-start green">&lt;div class="box"&gt;</span>
+        <p>I'm floating!</p>
+        <span class="label-end green">&lt;/div&gt;</span>
+    </div>
+    <div class="elem box">
+        <span class="label-start green">&lt;div class="box"&gt;</span>
+        <p>I'm floating!</p>
+        <span class="label-end green">&lt;/div&gt;</span>
+    </div>
+    <div class="elem box">
+        <span class="label-start green">&lt;div class="box"&gt;</span>
+        <p>I'm floating!</p>
+        <span class="label-end green">&lt;/div&gt;</span>
+    </div>
+    <div class="elem box">
+        <span class="label-start green">&lt;div class="box"&gt;</span>
+        <p>I'm floating!</p>
+        <span class="label-end green">&lt;/div&gt;</span>
+    </div>
+    <div class="elem box">
+        <span class="label-start green">&lt;div class="box"&gt;</span>
+        <p>I'm floating!</p>
+        <span class="label-end green">&lt;/div&gt;</span>
+    </div>
+    <div class="elem box">
+        <span class="label-start green">&lt;div class="box"&gt;</span>
+        <p>I'm floating!</p>
+        <span class="label-end green">&lt;/div&gt;</span>
+    </div>
+    <div class="elem box">
+        <span class="label-start green">&lt;div class="box"&gt;</span>
+        <p>I'm floating!</p>
+        <span class="label-end green">&lt;/div&gt;</span>
+    </div>
+
+    <div class="elem yellow-border after-box">
+        <span class="label-start yellow">&lt;div class="box"&gt;</span>
+        <p>
+            I'm using clear so I don't float next to above boxes
+        </p>
+        <span class="label-end yellow">&lt;/div&gt;</span>
+    </div>
+</div>
+
+<div>
+    <div class="elem box2">
+        <span class="label-start green">&lt;div class="box"&gt;</span>
+        <p>I'm floating!</p>
+        <span class="label-end green">&lt;/div&gt;</span>
+    </div>
+    <div class="elem box2">
+        <span class="label-start green">&lt;div class="box"&gt;</span>
+        <p>I'm floating!</p>
+        <span class="label-end green">&lt;/div&gt;</span>
+    </div>
+    <div class="elem box2">
+        <span class="label-start green">&lt;div class="box"&gt;</span>
+        <p>I'm floating!</p>
+        <span class="label-end green">&lt;/div&gt;</span>
+    </div>
+    <div class="elem box2">
+        <span class="label-start green">&lt;div class="box"&gt;</span>
+        <p>I'm floating!</p>
+        <span class="label-end green">&lt;/div&gt;</span>
+    </div>
+    <div class="elem box2">
+        <span class="label-start green">&lt;div class="box"&gt;</span>
+        <p>I'm floating!</p>
+        <span class="label-end green">&lt;/div&gt;</span>
+    </div>
+    <div class="elem box2">
+        <span class="label-start green">&lt;div class="box"&gt;</span>
+        <p>I'm floating!</p>
+        <span class="label-end green">&lt;/div&gt;</span>
+    </div>
+    <div class="elem box2">
+        <span class="label-start green">&lt;div class="box"&gt;</span>
+        <p>I'm floating!</p>
+        <span class="label-end green">&lt;/div&gt;</span>
+    </div>
+
+    <div class="elem yellow-border after-box">
+        <span class="label-start yellow">&lt;div class="box"&gt;</span>
+        <p>
+            I'm don't have to use clear in this case. Nice!
+        </p>
+        <span class="label-end yellow">&lt;/div&gt;</span>
+    </div>
+</div>
+<div class="container elem">
+    <span class="label-start green">&lt;class="container"&gt;</span>
+    <div class="nav-inline">
+        <span class="label-start red">&lt;nav&gt;</span>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Taco Menu</a></li>
+            <li><a href="#">Draft List</a></li>
+            <li><a href="#">Hours</a></li>
+            <li><a href="#">Directions</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+        <span class="label-end red">&lt;nav&gt;</span>
+    </div><!-- 这里是inline-block中间的空格会影响布局
+ --><div class="section-inline">
+        <section class="content content-inline">
+            <span class="label-start yellow">&lt;section&gt;</span>
+            <p class="lightgray">
+                The margin-left style for sections makes sure there is room for the nav. Otherwise the absolute and
+                static elements would overlap
+            </p>
+            <span class="label-end yellow">&lt;section&gt;</span>
+        </section>
+        <section class="content lightgray content-inline">
+            <span class="label-start yellow">&lt;section&gt;</span>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum,
+                nisi lorem egestas odio, vitae scelerisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec
+                congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Mauris ante ligula, facilisis
+                sed ornare eu, lobortis in odio. Praesent convallis urna a lacus interdum ut hendrerit risus congue.
+                Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet
+                sed ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non
+                fermentum. Sed dapibus pulvinar nibh tempor porta. Cras ac leo purus. Mauris quis diam velit.
+            </p>
+            <span class="label-end yellow">&lt;section&gt;</span>
+        </section>
+        <section class="content content-inline">
+            <span class="label-start yellow">&lt;section&gt;</span>
+            <p>
+                Notice what happens when you resize your browser. It works nicely!
+            </p>
+            <span class="label-end yellow">&lt;section&gt;</span>
+        </section>
+    </div>
+</div>
+
+<div class="container-flex elem">
+    <span class="label-start green">&lt;class="container"&gt;</span>
+    <div class="nav-flex">
+        <span class="label-start red">&lt;nav&gt;</span>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Taco Menu</a></li>
+            <li><a href="#">Draft List</a></li>
+            <li><a href="#">Hours</a></li>
+            <li><a href="#">Directions</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+        <span class="label-end red">&lt;nav&gt;</span>
+    </div>
+    <div class="section-flex">
+    <section class="content content-inline">
+        <span class="label-start yellow">&lt;section&gt;</span>
+        <p class="lightgray">
+            The margin-left style for sections makes sure there is room for the nav. Otherwise the absolute and
+            static elements would overlap
+        </p>
+        <span class="label-end yellow">&lt;section&gt;</span>
+    </section>
+    <section class="content lightgray content-inline">
+        <span class="label-start yellow">&lt;section&gt;</span>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum,
+            nisi lorem egestas odio, vitae scelerisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec
+            congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Mauris ante ligula, facilisis
+            sed ornare eu, lobortis in odio. Praesent convallis urna a lacus interdum ut hendrerit risus congue.
+            Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet
+            sed ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non
+            fermentum. Sed dapibus pulvinar nibh tempor porta. Cras ac leo purus. Mauris quis diam velit.
+        </p>
+        <span class="label-end yellow">&lt;section&gt;</span>
+    </section>
+    <section class="content content-inline">
+        <span class="label-start yellow">&lt;section&gt;</span>
+        <p>
+            Notice what happens when you resize your browser. It works nicely!
+        </p>
+        <span class="label-end yellow">&lt;section&gt;</span>
+    </section>
+</div>
+</div>
+</body>
+</html>
