@@ -4,6 +4,14 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <style>
+        html{
+            font-family: sans-serif;
+        }
+
+        * {
+            box-sizing: border-box
+        }
+
         .flex{
             display: flex;
             height:25px;
@@ -24,6 +32,231 @@
         .grow{
             flex-grow: 1;
         }
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .d-flex li:nth-of-type(1) {
+            background: #484281;
+
+            flex: 3 0 0;
+        }
+
+        .d-flex li:nth-of-type(2) {
+            background: #5248af;
+
+            flex: 1 0 0;
+        }
+
+        .d-flex li:nth-of-type(3) {
+            background: #786bfa;
+
+            flex: 2 0 0;
+        }
+
+        .container{
+            margin: 1rem 5%;
+
+            margin: 2em auto;
+            padding: 2em 5%;
+            width: 100%;
+
+            line-height: 1.6;
+            text-align: center;
+        }
+
+        .d-flex {
+            display: flex;
+            flex-flow: row nowrap;
+        }
+
+        .d-flex li{
+            padding: 1em;
+            color: #fff;
+        }
+
+        ul.nav{
+            margin: 0 1em;
+            padding: 0;
+            list-style: none;
+            width: 8em;
+            background-color: #8BD400;
+            border:1px solid #486B02;
+        }
+
+        ul.nav a{
+            display: block;
+            color: #2B3F00;
+            text-decoration: none;
+            border-top: 1px solid #E4FFD3;
+            border-bottom: 1px solid #486B02;
+            padding: 0.3em 1em;
+        }
+
+        ul.nav:last-child a{
+            border-bottom: 0;
+        }
+
+        ul.nav a:hover{
+            color: #E4FFD3;
+            background-color: #6DA203;
+        }
+
+        .clearfix:after{
+            display: block;
+            content: "";
+            clear: both;
+        }
+
+        ol.pagination{
+            display: block;
+            padding: 0;
+            margin: 1em;
+            list-style: none;
+        }
+
+        ol.pagination li{
+            float: left;
+            margin-right: 0.6em;
+        }
+
+        ol.pagination a,
+        ol.pagination li.selected{
+            display: block;
+            border: 1px solid #999;
+            padding: 0.2em 0.5em;
+            text-decoration: none;
+            color: #007aff;
+        }
+
+        ol.pagination li.selected,
+        ol.pagination a:hover,
+        ol.pagination a:focus{
+            background-color: #007aff;
+            color: white;
+        }
+
+        ol.pagination a[rel="prev"],
+        ol.pagination a[rel="next"]{
+            border: none;
+        }
+
+        ol.pagination a[rel="prev"]:before{
+            content: "\00AB";
+            margin-right: 0.5em;
+        }
+        ol.pagination a[rel="next"]:after{
+            content: "\00BB";
+            margin-left: 0.5em;
+        }
+
+        ol.pagination-flex{
+            display: flex;
+            flex-flow: row nowrap;
+            align-items: center;
+            padding: 0;
+            margin: 1em;
+            list-style: none;
+        }
+
+        ol.pagination-flex li{
+            flex: 0 1 auto;
+            padding: 0;
+            margin: 0;
+            margin-right: 0.6em;
+        }
+
+        ol.pagination-flex a,
+        ol.pagination-flex li.selected{
+            display: block;
+            padding: 0.2em 0.5em;
+            text-decoration: none;
+            border: 1px solid #AAA;
+            color: #007aff;
+        }
+
+        ol.pagination-flex li.selected,
+        ol.pagination-flex a:hover,
+        ol.pagination-flex a:focus{
+            background-color: #007aff;
+            color: white;
+        }
+
+        ol.pagination-flex a[rel="prev"],
+        ol.pagination-flex a[rel="next"]{
+            border: none;
+        }
+
+        ol.pagination-flex a[rel="prev"]:before{
+            content: "\00AB";
+            margin-right: 0.5em;
+        }
+
+        ol.pagination-flex a[rel="next"]:after{
+            content: "\00BB";
+            margin-left: 0.5em;
+        }
+
+        ul.nav-hoz{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            width: 72em;
+            overflow: hidden;
+            background: #FAA819;
+        }
+        ul.nav-hoz li{
+            float: left;
+        }
+        ul.nav-hoz a{
+            display: block;
+            padding: 0 3em;
+            line-height: 2.1em;
+            text-decoration: none;
+            color: #fff;
+        }
+        ul.nav-hoz a:hover,
+        ul.nav-hoz a:focus{
+            color: #333;
+        }
+
+        ul.nav-flex{
+            display: flex;
+            flex-flow: row nowrap;
+            padding: 0;
+            margin: 0;
+            list-style: none;
+            background-color: #FAA819;
+
+            margin: 1em 0;
+        }
+
+        ul.nav-flex li{
+            flex: 1 1 auto;
+            text-align: center;
+        }
+        ul.nav-flex li:last-child{
+            flex: 1 5 auto;
+        }
+
+        ul.nav-flex a{
+            padding: 0 0;
+            line-height: 2.1em;
+            text-decoration: none;
+            color: #fff;
+        }
+
+        ul.nav-flex a:hover,
+        ul.nav-flex a:focus{
+            color: #333;
+        }
     </style>
 </head>
 <body>
@@ -36,5 +269,62 @@
     <div class="flex">
         <div class="child grow">Some Content</div>
     </div>
+
+    <div class="container">
+        <ul class="d-flex">
+            <li>3 / 0 / 0;</li>
+            <li>1 / 0 / 0;</li>
+            <li>2 / 0 / 0;</li>
+        </ul>
+    </div>
+
+    <ul class="nav">
+        <li><a href="home.html">Home</a> </li>
+        <li><a href="about.html">About</a> </li>
+        <li><a href="services.html">Our Services</a> </li>
+        <li><a href="work.html">Our Work</a> </li>
+        <li><a href="news.html">News</a> </li>
+        <li><a href="contact.html">Contact</a> </li>
+    </ul>
+
+    <ol class="pagination clearfix">
+        <li><a href="search.htm?page=1" rel="prev">Prev</a></li>
+        <li><a href="search.htm?page=1">1</a></li>
+        <li class="selected">2</li>
+        <li><a href="search.htm?page=1">3</a></li>
+        <li><a href="search.htm?page=1">4</a></li>
+        <li><a href="search.htm?page=1">5</a></li>
+        <li><a href="search.htm?page=3" rel="next">Next</a></li>
+    </ol>
+
+    <ol class="pagination-flex">
+        <li><a href="search.html?page=1" rel="prev">Prev</a></li>
+        <li><a href="search.html?page=1">1</a></li>
+        <li class="selected">2</li>
+        <li><a href="search.html?page=1">3</a></li>
+        <li><a href="search.html?page=1">4</a></li>
+        <li><a href="search.html?page=1">5</a></li>
+        <li><a href="search.htm?page=3" rel="next">Next</a></li>
+    </ol>
+
+    <ul class="nav-hoz">
+        <li><a href="home.htm">Home</a></li>
+        <li><a href="about.htm">About</a></li>
+        <li><a href="news.htm">News</a></li>
+        <li><a href="products.htm">Products</a></li>
+        <li><a href="services.htm">Services</a></li>
+        <li><a href="clients.htm">Clients</a></li>
+        <li><a href="case-studies.htm">Case Studies</a></li>
+    </ul>
+
+    <ul class="nav-flex">
+        <li><a href="home.htm">Home</a></li>
+        <li><a href="about.htm">About</a></li>
+        <li><a href="news.htm">News</a></li>
+        <li><a href="products.htm">Products</a></li>
+        <li><a href="services.htm">Services</a></li>
+        <li><a href="clients.htm">Clients</a></li>
+        <li><a href="case-studies.htm">Case Studies</a></li>
+    </ul>
 </body>
 </html>
